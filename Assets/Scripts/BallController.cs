@@ -5,15 +5,10 @@ public class BallController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		this.GetComponent<Rigidbody2D>().velocity = new Vector2(2, 2);
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-	void FixedUpdate() {
-
+	public void ResetBall () {
+		this.GetComponent<Transform>().position = new Vector3(0, 0, 0);
 	}
 }
