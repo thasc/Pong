@@ -19,7 +19,7 @@ public class PaddleController : MonoBehaviour {
 			if (pressedDown) {
 				rigidbody.velocity = new Vector2(0, -Speed);
 			}
-			if(!pressedUp && !pressedDown) {
+			if(!(pressedUp ^ pressedDown)) {
 				rigidbody.velocity = Vector2.zero;
 			}
 
@@ -34,7 +34,7 @@ public class PaddleController : MonoBehaviour {
 			if (pressedDown) {
 				rigidbody.velocity = new Vector2(0, -Speed);
 			}
-			if(!pressedUp && !pressedDown) {
+			if(!(pressedUp ^ pressedDown)) {
 				rigidbody.velocity = Vector2.zero;
 			}
 
