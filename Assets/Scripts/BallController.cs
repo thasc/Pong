@@ -10,4 +10,5 @@ public class BallController : MonoBehaviour {
 	public void ResetBall () {
 		this.GetComponent<Transform>().position = new Vector3(0, 0, 0);
 	}
+
 }

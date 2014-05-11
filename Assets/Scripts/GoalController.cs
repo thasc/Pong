@@ -8,11 +8,12 @@ public class GoalController : MonoBehaviour {
 	public void OnTriggerEnter2D (Collider2D other) {
 		if(other.tag == "Ball") {
 			if(LeftGetsPoint) {
-				Debug.Log("Left gets a point!");
+				GameObject.FindWithTag("Scoreboard").GetComponent<ScoreboardController>().LeftScored();
 			} else {
-				Debug.Log("Right gets a point!");
+				GameObject.FindWithTag("Scoreboard").GetComponent<ScoreboardController>().RightScored();
 			}
 			other.GetComponent<BallController>().ResetBall();
 		}
 	}
+
 }
